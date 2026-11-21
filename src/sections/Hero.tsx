@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import RouteShips from "@/components/RouteShips";
 
 const stats = [
   { value: "500+", label: "Businesses served" },
@@ -207,7 +208,7 @@ export default function Hero() {
         <div className="max-w-2xl">
           {/* Trust Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-card mb-8"
@@ -222,18 +223,18 @@ export default function Hero() {
 
           {/* Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6"
           >
-            Import directly from China.{" "}
+            Let&apos;s import directly from China.{" "}
             <span className="gradient-text italic">Without the guesswork.</span>
           </motion.h1>
 
           {/* Subheadline */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-foreground-muted mb-8 max-w-xl leading-relaxed"
@@ -245,7 +246,7 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-wrap gap-4 mb-12"
@@ -270,7 +271,7 @@ export default function Hero() {
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
@@ -286,12 +287,21 @@ export default function Hero() {
               </div>
             ))}
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-10 max-w-xl overflow-hidden rounded-3xl border border-border"
+          >
+            <RouteShips id="hero" origin="Shanghai" destination="Chennai" />
+          </motion.div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block"

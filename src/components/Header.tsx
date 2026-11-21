@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
+import Logo from "@/components/Logo";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,20 +36,18 @@ export default function Header() {
             : "bg-transparent"
         }`}
       >
+        <div className="tricolor-bar" />
         <div className="container">
           <nav className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo */}
             <a
               href="#home"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick("#home");
               }}
-              className="flex items-center gap-2 font-sora font-bold text-xl md:text-2xl tracking-tight"
+              aria-label="Let's ImportNow home"
             >
-              <span className="text-white">IMP</span>
-              <span className="gradient-text">O</span>
-              <span className="text-white">RTNOW</span>
+              <Logo />
             </a>
 
             {/* Desktop Navigation */}

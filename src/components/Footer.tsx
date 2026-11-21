@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 import { NAV_LINKS } from "@/lib/constants";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   const currentYear = useMemo(() => {
@@ -30,11 +31,10 @@ export default function Footer() {
                 e.preventDefault();
                 handleNavClick("#home");
               }}
-              className="flex items-center gap-2 font-sora font-bold text-xl tracking-tight mb-4"
+              className="mb-4 inline-block"
+              aria-label="Let's ImportNow home"
             >
-              <span className="text-white">IMP</span>
-              <span className="gradient-text">O</span>
-              <span className="text-white">RTNOW</span>
+              <Logo size="sm" />
             </a>
             <p className="text-sm text-foreground-muted">
               End-to-end imports from China to India: sourcing, factory
@@ -76,9 +76,9 @@ export default function Footer() {
           </p>
 
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm text-foreground-secondary">
-            <span>Concept design</span>
+            <span>Let&apos;s ImportNow</span>
             <span className="text-foreground-muted">·</span>
-            <span>preview prepared for ImportNow</span>
+            <span>China ship to India ship</span>
           </div>
         </div>
       </div>

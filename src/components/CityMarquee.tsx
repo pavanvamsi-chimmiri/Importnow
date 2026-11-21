@@ -13,8 +13,8 @@ export default function CityMarquee() {
             key={`${city}-${index}`}
             className="text-sm text-foreground-secondary flex items-center gap-2"
           >
-            <span>{city}</span>
-            <span className="text-orange-primary">—</span>
+            <span>🇨🇳 {city} 🇮🇳</span>
+            <span className="text-orange-primary">✦</span>
           </span>
         ))}
       </div>

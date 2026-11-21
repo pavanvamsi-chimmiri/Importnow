@@ -244,7 +244,7 @@ export default function Journey() {
 
         {/* Progress Bar */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-8 p-5 rounded-2xl bg-background/70 backdrop-blur-sm border border-border"

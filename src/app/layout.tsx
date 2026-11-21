@@ -15,11 +15,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ImportNow — Import Directly from China to India",
+  title: "Let's ImportNow — Import Directly from China to India",
   description: "Sourcing, factory inspection, shipping and customs, handled end to end by a team with its own company in Shanghai. You choose the product. We bring it to your door.",
   keywords: ["import", "china", "india", "sourcing", "shipping", "customs", "factory inspection"],
   openGraph: {
-    title: "ImportNow — Import Directly from China to India",
+    title: "Let's ImportNow — Import Directly from China to India",
     description: "Sourcing, factory inspection, shipping and customs, handled end to end by a team with its own company in Shanghai.",
     type: "website",
   },
