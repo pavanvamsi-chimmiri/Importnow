@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Let's ImportNow — Project Summary</title>
+  <style>
+    :root {
+      --bg: #07131c;
+      --card: #10232e;
+      --ink: #f7f1e6;
+      --muted: #c9d2c8;
+      --red: #de2910;
+      --saffron: #ff9933;
+      --green: #138808;
+      --gold: #e8c56b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    .bar {
+      height: 6px;
+      background: linear-gradient(90deg, var(--red), var(--saffron), #fff 50%, var(--green));
+    }
+    .wrap { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 0 0 28px; }
+    .btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 18px;
+      font: 600 14px/1 Inter, system-ui, sans-serif;
+      cursor: pointer;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(100deg, var(--red), var(--saffron), var(--green));
+    }
+    .btn.ghost {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+    h1, h2, h3 { font-family: Inter, system-ui, sans-serif; }
+    h1 { font-size: 32px; margin: 0 0 8px; }
+    .sub { color: var(--muted); margin: 0 0 24px; font-family: Inter, system-ui, sans-serif; }
+    h2 {
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(232,197,107,0.25);
+      padding-bottom: 8px;
+      margin: 28px 0 12px;
+    }
+    p, li { font-size: 15px; }
+    a { color: var(--saffron); }
+    .links { width: 100%; border-collapse: collapse; font-family: Inter, system-ui, sans-serif; font-size: 14px; }
+    .links th, .links td { text-align: left; padding: 10px 8px; border-bottom: 1px solid rgba(255,255,255,0.08); vertical-align: top; }
+    .links th { color: var(--gold); font-weight: 600; width: 180px; }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(232,197,107,0.18);
+      border-radius: 16px;
+      padding: 16px 18px;
+      margin: 12px 0;
+    }
+    ol, ul { margin: 8px 0 0; padding-left: 20px; }
+    .note {
+      background: rgba(255,153,51,0.1);
+      border-left: 4px solid var(--saffron);
+      padding: 12px 14px;
+      border-radius: 0 12px 12px 0;
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 14px;
+    }
+    footer { margin-top: 36px; color: var(--muted); font-size: 13px; font-family: Inter, system-ui, sans-serif; }
+    @media print {
+      body { background: #fff; color: #111; }
+      .actions { display: none; }
+      .bar { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      a { color: #0b5cab; }
+      .card, .note { background: #f7f4ea; color: #111; }
+      h2, .links th, .sub, footer { color: #444; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bar"></div>
+  <div class="wrap">
+    <div class="actions">
+      <button class="btn" type="button" onclick="window.print()">Download / print PDF</button>
+      <a class="btn ghost" href="./lets-importnow-summary.pdf" download="lets-importnow-summary.pdf">Download PDF file</a>
+    </div>
+
+    <h1>Let's ImportNow</h1>
+    <p class="sub">Project summary — China to India import website (hiring assignment)</p>
+
+    <h2>1. What this project is</h2>
+    <p>
+      ImportNow asked candidates to recreate their concept website from scratch using AI tools,
+      then submit a live link, source code, and a short note on the tools used.
+    </p>
+    <p>
+      We built a full Next.js website with the same sections and copy as the reference, then restyled
+      it as <strong>Let's ImportNow</strong> so it does not look identical. Delivery cards show a
+      China cargo ship and an India cargo ship.
+    </p>
+
+    <h2>2. Live links</h2>
+    <table class="links">
+      <tr><th>Vercel (live now)</th><td><a href="https://fleet-sable-z5kwmiu.tmp.now">https://fleet-sable-z5kwmiu.tmp.now</a></td></tr>
+      <tr><th>GitHub</th><td><a href="https://github.com/pavanvamsi-chimmiri/Importnow">https://github.com/pavanvamsi-chimmiri/Importnow</a></td></tr>
+      <tr><th>Pull request</th><td><a href="https://github.com/pavanvamsi-chimmiri/Importnow/pull/1">https://github.com/pavanvamsi-chimmiri/Importnow/pull/1</a></td></tr>
+      <tr><th>Localhost</th><td><a href="http://localhost:3000">http://localhost:3000</a></td></tr>
+      <tr><th>Reference site</th><td><a href="https://importnow-concept.vercel.app/#home">https://importnow-concept.vercel.app/#home</a></td></tr>
+      <tr><th>Target Vercel name</th><td><a href="https://lets-importnow.vercel.app">https://lets-importnow.vercel.app</a></td></tr>
+    </table>
+
+    <div class="note">
+      The Vercel claim screen has <strong>no box to type lets-importnow</strong>. Click <strong>Transfer</strong>,
+      then in the Vercel dashboard open the project → Settings → General → rename it to
+      <strong>lets-importnow</strong>. The URL becomes https://lets-importnow.vercel.app.
+    </div>
+
+    <h2>3. What we did</h2>
+    <ol>
+      <li>Studied the full reference website (every homepage section, desktop and mobile).</li>
+      <li>Created a Next.js + TypeScript + Tailwind app with reusable components.</li>
+      <li>Implemented every section: hero, services, journey, industries, Shanghai licence, China trips, projects, testimonials, FAQ, contact, footer.</li>
+      <li>Made navigation, WhatsApp contact, the quote form, FAQ accordion, and mobile menu actually work.</li>
+      <li>Changed the UI from a lookalike into Let's ImportNow: tricolor (China red, saffron, India green), new logo, ocean background.</li>
+      <li>Added China-flag and India-flag cargo ships on the recently-delivered cards and in the hero.</li>
+      <li>Ran the site on localhost:3000 and deployed it to Vercel.</li>
+      <li>Pushed the source to GitHub.</li>
+    </ol>
+
+    <h2>4. Website sections</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Header</strong> — Let's ImportNow logo, links, Get a free quote, mobile menu.</li>
+        <li><strong>Hero</strong> — “Let's import directly from China”, stats, globe, Shanghai → Chennai ships.</li>
+        <li><strong>Services</strong> — sourcing, inspection, quality, shipping, customs, doorstep delivery.</li>
+        <li><strong>How it works</strong> — six steps from factory to door, with shipment progress.</li>
+        <li><strong>What we import</strong> — furniture, electronics, EV, lighting, supermarket, machinery.</li>
+        <li><strong>Shanghai licence</strong> — registered China company details.</li>
+        <li><strong>China trips</strong> — Canton Fair trips and what is included.</li>
+        <li><strong>Recently delivered</strong> — four client jobs with China ship and India ship artwork.</li>
+        <li><strong>Stories, FAQ, Contact</strong> — reviews, accordion FAQ, WhatsApp form.</li>
+      </ul>
+    </div>
+
+    <h2>5. Technology</h2>
+    <p>Next.js 16, React 19, TypeScript, Tailwind CSS 4, Framer Motion, Lucide React, Sora and Inter fonts. Hosted on Vercel. Built with Cursor. Reference pages were inspected with Playwright.</p>
+
+    <h2>6. How to run</h2>
+    <div class="card">
+      <p><code>git clone https://github.com/pavanvamsi-chimmiri/Importnow.git</code></p>
+      <p><code>npm install</code></p>
+      <p><code>npm run dev</code> → open http://localhost:3000</p>
+    </div>
+
+    <footer>
+      Let's ImportNow project summary · 21 November 2026 (IST) · Prepared for the ImportNow hiring assignment.
+    </footer>
+  </div>
+</body>
+</html>

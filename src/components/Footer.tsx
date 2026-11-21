@@ -75,10 +75,20 @@ export default function Footer() {
             · All rights reserved.
           </p>
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm text-foreground-secondary">
-            <span>Let&apos;s ImportNow</span>
-            <span className="text-foreground-muted">·</span>
-            <span>China ship to India ship</span>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="/lets-importnow-summary.html"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm text-foreground-secondary hover:text-white"
+            >
+              Project summary (HTML)
+            </a>
+            <a
+              href="/lets-importnow-summary.pdf"
+              download
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm text-foreground-secondary hover:text-white"
+            >
+              Download PDF
+            </a>
           </div>
         </div>
       </div>
