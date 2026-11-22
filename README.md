@@ -8,7 +8,7 @@ The original brief was to recreate [importnow-concept.vercel.app](https://import
 
 | Place | URL |
 | --- | --- |
-| **Website** | [https://lets-importnow.vercel.app](https://lets-importnow.vercel.app) |
+| **Website** | [https://importnow.vercel.app](https://importnow.vercel.app) |
 | **GitHub repository** | [https://github.com/pavanvamsi-chimmiri/Importnow](https://github.com/pavanvamsi-chimmiri/Importnow) |
 | **Pull request** | [https://github.com/pavanvamsi-chimmiri/Importnow/pull/1](https://github.com/pavanvamsi-chimmiri/Importnow/pull/1) |
 | **Local development** | [http://localhost:3000](http://localhost:3000) |
@@ -16,23 +16,9 @@ The original brief was to recreate [importnow-concept.vercel.app](https://import
 | **Project summary (HTML)** | [lets-importnow-summary.html](./public/lets-importnow-summary.html) |
 | **Project summary (PDF)** | [lets-importnow-summary.pdf](./public/lets-importnow-summary.pdf) |
 
-### How to get https://lets-importnow.vercel.app
+The GitHub-connected Vercel project is named `importnow`, so the live URL is **https://importnow.vercel.app**.
 
-Renaming a claimed temporary project does **not** change the old random Vercel address. Create (or reconnect) a normal project from GitHub with this exact name:
-
-1. Open [vercel.com/new](https://vercel.com/new).
-2. Import the GitHub repo **pavanvamsi-chimmiri/Importnow**.
-3. Set **Project Name** to `lets-importnow` (this is what becomes the URL).
-4. Click **Deploy**.
-
-The site will then open at **https://lets-importnow.vercel.app**.
-
-If the project already exists but that URL still 404s:
-
-1. Vercel → your project → **Settings → Domains**.
-2. Add `lets-importnow.vercel.app` if it is missing.
-3. Open **Deployments**, open the latest production deploy, and choose **Promote to Production** if needed.
-4. Or **Settings → Git** → connect this GitHub repo and click **Redeploy**.
+To change the address to **https://lets-importnow.vercel.app**: Vercel dashboard → project **importnow** → **Settings → General → Project Name** → `lets-importnow` → Save. Then add `lets-importnow.vercel.app` under **Settings → Domains** if Vercel does not add it automatically.
 
 ## What we built
 
@@ -110,7 +96,7 @@ npm run start
 2. Set the project name to `lets-importnow`.
 3. Deploy. No environment variables are required.
 
-The production URL is **https://lets-importnow.vercel.app**.
+The production URL is **https://importnow.vercel.app**.
 
 Or from the CLI after `vercel login`:
 

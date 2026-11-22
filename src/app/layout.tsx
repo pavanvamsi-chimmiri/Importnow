@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lets-importnow.vercel.app"),
+  metadataBase: new URL("https://importnow.vercel.app"),
   title: "Let's ImportNow — Import Directly from China to India",
   description: "Sourcing, factory inspection, shipping and customs, handled end to end by a team with its own company in Shanghai. You choose the product. We bring it to your door.",
   keywords: ["import", "china", "india", "sourcing", "shipping", "customs", "factory inspection"],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Let's ImportNow — Import Directly from China to India",
     description: "Sourcing, factory inspection, shipping and customs, handled end to end by a team with its own company in Shanghai.",
-    url: "https://lets-importnow.vercel.app",
+    url: "https://importnow.vercel.app",
     siteName: "Let's ImportNow",
     type: "website",
   },
