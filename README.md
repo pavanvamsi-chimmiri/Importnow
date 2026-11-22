@@ -8,7 +8,6 @@ A China-to-India import website. Clients pick a product; Let's ImportNow handles
 | --- | --- |
 | **Website** | [https://importnow.vercel.app](https://importnow.vercel.app) |
 | **GitHub** | [https://github.com/pavanvamsi-chimmiri/Importnow](https://github.com/pavanvamsi-chimmiri/Importnow) |
-| **WhatsApp** | [+91 99897 24320](https://wa.me/919989724320) |
 
 ## What we built
 
