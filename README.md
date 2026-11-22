@@ -8,7 +8,6 @@ A China-to-India import website. Clients pick a product; Let's ImportNow handles
 | --- | --- |
 | **Website** | [https://importnow.vercel.app](https://importnow.vercel.app) |
 | **GitHub** | [https://github.com/pavanvamsi-chimmiri/Importnow](https://github.com/pavanvamsi-chimmiri/Importnow) |
-| **Document (PDF)** | [lets-importnow-project.pdf](https://importnow.vercel.app/lets-importnow-project.pdf) |
 
 ## What we have done
 
@@ -55,7 +54,7 @@ src/
 │                        # Projects, Testimonials, FAQ, Contact
 ├── lib/                 # site copy and helpers
 └── types/               # TypeScript types
-public/                  # icons and the downloadable project PDF
+public/                  # site icons
 ```
 
 ## Technology
