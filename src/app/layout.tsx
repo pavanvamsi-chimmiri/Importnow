@@ -19,6 +19,14 @@ export const metadata: Metadata = {
   title: "Let's ImportNow — Import Directly from China to India",
   description: "Sourcing, factory inspection, shipping and customs, handled end to end by a team with its own company in Shanghai. You choose the product. We bring it to your door.",
   keywords: ["import", "china", "india", "sourcing", "shipping", "customs", "factory inspection"],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
   alternates: {
     canonical: "/",
   },

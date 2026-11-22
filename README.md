@@ -1,31 +1,21 @@
 # Let's ImportNow
 
-A China-to-India import website built for the ImportNow hiring assignment.
+A China-to-India import website. Clients pick a product; Let's ImportNow handles sourcing, factory inspection, shipping, customs, and doorstep delivery through a registered company in Shanghai.
 
-The original brief was to recreate [importnow-concept.vercel.app](https://importnow-concept.vercel.app/#home). This project keeps that content and structure, then restyles it as **Let's ImportNow** with China and India cargo ships, a tricolor palette, and working forms and navigation.
+## Links
 
-## Live links
-
-| Place | URL |
+| | |
 | --- | --- |
 | **Website** | [https://importnow.vercel.app](https://importnow.vercel.app) |
-| **GitHub repository** | [https://github.com/pavanvamsi-chimmiri/Importnow](https://github.com/pavanvamsi-chimmiri/Importnow) |
-| **Pull request** | [https://github.com/pavanvamsi-chimmiri/Importnow/pull/1](https://github.com/pavanvamsi-chimmiri/Importnow/pull/1) |
-| **Local development** | [http://localhost:3000](http://localhost:3000) |
-| **Reference website** | [https://importnow-concept.vercel.app](https://importnow-concept.vercel.app/#home) |
-| **Project summary (HTML)** | [lets-importnow-summary.html](./public/lets-importnow-summary.html) |
-| **Project summary (PDF)** | [lets-importnow-summary.pdf](./public/lets-importnow-summary.pdf) |
-
-The GitHub-connected Vercel project is named `importnow`, so the live URL is **https://importnow.vercel.app**.
-
-To change the address to **https://lets-importnow.vercel.app**: Vercel dashboard → project **importnow** → **Settings → General → Project Name** → `lets-importnow` → Save. Then add `lets-importnow.vercel.app` under **Settings → Domains** if Vercel does not add it automatically.
+| **GitHub** | [https://github.com/pavanvamsi-chimmiri/Importnow](https://github.com/pavanvamsi-chimmiri/Importnow) |
+| **WhatsApp** | [+91 99897 24320](https://wa.me/919989724320) |
 
 ## What we built
 
 ### Brand and UI
-- Renamed the product to **Let's ImportNow**.
-- Used a China-red / India-saffron / India-green palette on an ocean-navy background so the site does not look like the original concept.
-- Added a **China cargo ship** (red hull, Chinese flag) and an **India cargo ship** (green hull, Indian flag) on the recently-delivered cards and in the hero.
+- Product name **Let's ImportNow**, with a cargo-ship mark instead of the default browser icon.
+- China-red / India-saffron / India-green palette on an ocean-navy background.
+- **China cargo ship** and **India cargo ship** on the recently-delivered cards and in the hero.
 
 ### Website sections
 1. **Header** — Let's ImportNow logo, section links, quote button, mobile menu.
@@ -44,7 +34,7 @@ To change the address to **https://lets-importnow.vercel.app**: Vercel dashboard
 
 ### What works
 - Smooth-scroll navigation on desktop and mobile.
-- Quote buttons and contact form open WhatsApp (`+91 99897 24320`).
+- Quote buttons and contact form open WhatsApp.
 - FAQ expand/collapse.
 - Journey steps auto-advance.
 - Responsive layout for phones, tablets, and desktops.
@@ -63,53 +53,16 @@ To change the address to **https://lets-importnow.vercel.app**: Vercel dashboard
 
 ```
 src/
-├── app/                 # layout, page, global styles
+├── app/                 # layout, page, global styles, site icon
 ├── components/          # Header, Footer, Logo, RouteShips, CityMarquee, WhatsApp
 ├── sections/            # Hero, Services, Journey, Industries, License, Trips,
 │                        # Projects, Testimonials, FAQ, Contact
 ├── lib/constants.ts     # all copy and content
 └── types/               # TypeScript types
-public/
-├── lets-importnow-summary.html
-└── lets-importnow-summary.pdf
-```
-
-## Run locally
-
-```bash
-git clone https://github.com/pavanvamsi-chimmiri/Importnow.git
-cd Importnow
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-```bash
-npm run build
-npm run start
-```
-
-## Deploy on Vercel
-
-1. Import [pavanvamsi-chimmiri/Importnow](https://github.com/pavanvamsi-chimmiri/Importnow) in the [Vercel dashboard](https://vercel.com/new).
-2. Set the project name to `lets-importnow`.
-3. Deploy. No environment variables are required.
-
-The production URL is **https://importnow.vercel.app**.
-
-Or from the CLI after `vercel login`:
-
-```bash
-npx vercel --yes --prod --project lets-importnow --create-if-missing
 ```
 
 ## Tools used
 
 - **Cursor** — build, restyle, and deploy
-- **Playwright** — inspect the reference site and capture screenshots
+- **Playwright** — inspect layouts and capture screenshots
 - **Vercel** — hosting
-
-## License
-
-Created as a hiring / portfolio assignment. Content is based on the ImportNow concept site.

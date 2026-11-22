@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Let's ImportNow — Project Summary</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <style>
     :root {
       --bg: #07131c;
@@ -70,21 +71,13 @@
       margin: 12px 0;
     }
     ol, ul { margin: 8px 0 0; padding-left: 20px; }
-    .note {
-      background: rgba(255,153,51,0.1);
-      border-left: 4px solid var(--saffron);
-      padding: 12px 14px;
-      border-radius: 0 12px 12px 0;
-      font-family: Inter, system-ui, sans-serif;
-      font-size: 14px;
-    }
     footer { margin-top: 36px; color: var(--muted); font-size: 13px; font-family: Inter, system-ui, sans-serif; }
     @media print {
       body { background: #fff; color: #111; }
       .actions { display: none; }
       .bar { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
       a { color: #0b5cab; }
-      .card, .note { background: #f7f4ea; color: #111; }
+      .card { background: #f7f4ea; color: #111; }
       h2, .links th, .sub, footer { color: #444; }
     }
   </style>
@@ -98,52 +91,41 @@
     </div>
 
     <h1>Let's ImportNow</h1>
-    <p class="sub">Project summary — China to India import website (hiring assignment)</p>
+    <p class="sub">China to India import website — project summary</p>
 
     <h2>1. What this project is</h2>
     <p>
-      ImportNow asked candidates to recreate their concept website from scratch using AI tools,
-      then submit a live link, source code, and a short note on the tools used.
+      Let's ImportNow is an end-to-end import service from China to India. A client chooses the
+      product; the team sources factories, inspects them, ships the goods, clears customs, and
+      delivers to the door through a registered company in Shanghai.
     </p>
     <p>
-      We built a full Next.js website with the same sections and copy as the reference, then restyled
-      it as <strong>Let's ImportNow</strong> so it does not look identical. Delivery cards show a
-      China cargo ship and an India cargo ship.
+      This website presents that service with a Let's ImportNow brand, China and India cargo ships,
+      and working quote, WhatsApp, and navigation flows.
     </p>
 
-    <h2>2. Live links</h2>
+    <h2>2. Links</h2>
     <table class="links">
       <tr><th>Website</th><td><a href="https://importnow.vercel.app">https://importnow.vercel.app</a></td></tr>
       <tr><th>GitHub</th><td><a href="https://github.com/pavanvamsi-chimmiri/Importnow">https://github.com/pavanvamsi-chimmiri/Importnow</a></td></tr>
-      <tr><th>Pull request</th><td><a href="https://github.com/pavanvamsi-chimmiri/Importnow/pull/1">https://github.com/pavanvamsi-chimmiri/Importnow/pull/1</a></td></tr>
-      <tr><th>Localhost</th><td><a href="http://localhost:3000">http://localhost:3000</a></td></tr>
-      <tr><th>Reference site</th><td><a href="https://importnow-concept.vercel.app/#home">https://importnow-concept.vercel.app/#home</a></td></tr>
+      <tr><th>WhatsApp</th><td><a href="https://wa.me/919989724320">+91 99897 24320</a></td></tr>
     </table>
-
-    <div class="note">
-      The live website is <strong><a href="https://importnow.vercel.app">https://importnow.vercel.app</a></strong>.
-      Vercel named the project after the GitHub repo. To use
-      <strong>https://lets-importnow.vercel.app</strong>, rename the Vercel project to
-      <code>lets-importnow</code> in Settings → General, then confirm the domain under Settings → Domains.
-    </div>
 
     <h2>3. What we did</h2>
     <ol>
-      <li>Studied the full reference website (every homepage section, desktop and mobile).</li>
-      <li>Created a Next.js + TypeScript + Tailwind app with reusable components.</li>
-      <li>Implemented every section: hero, services, journey, industries, Shanghai licence, China trips, projects, testimonials, FAQ, contact, footer.</li>
-      <li>Made navigation, WhatsApp contact, the quote form, FAQ accordion, and mobile menu actually work.</li>
-      <li>Changed the UI from a lookalike into Let's ImportNow: tricolor (China red, saffron, India green), new logo, ocean background.</li>
-      <li>Added China-flag and India-flag cargo ships on the recently-delivered cards and in the hero.</li>
-      <li>Ran the site on localhost:3000 and deployed it to Vercel.</li>
-      <li>Pushed the source to GitHub.</li>
+      <li>Built a Next.js + TypeScript + Tailwind website for the full import journey.</li>
+      <li>Implemented hero, services, journey, industries, Shanghai licence, China trips, projects, testimonials, FAQ, contact, and footer.</li>
+      <li>Made navigation, WhatsApp contact, the quote form, FAQ accordion, and mobile menu work.</li>
+      <li>Designed Let's ImportNow with a tricolor palette, ship logo, and a custom tab icon (no default Next.js “N”).</li>
+      <li>Added China-flag and India-flag cargo ships on delivered-job cards and in the hero.</li>
+      <li>Deployed the site and published the source on GitHub.</li>
     </ol>
 
     <h2>4. Website sections</h2>
     <div class="card">
       <ul>
         <li><strong>Header</strong> — Let's ImportNow logo, links, Get a free quote, mobile menu.</li>
-        <li><strong>Hero</strong> — “Let's import directly from China”, stats, globe, Shanghai → Chennai ships.</li>
+        <li><strong>Hero</strong> — headline, stats, globe, Shanghai → Chennai ships.</li>
         <li><strong>Services</strong> — sourcing, inspection, quality, shipping, customs, doorstep delivery.</li>
         <li><strong>How it works</strong> — six steps from factory to door, with shipment progress.</li>
         <li><strong>What we import</strong> — furniture, electronics, EV, lighting, supermarket, machinery.</li>
@@ -155,17 +137,10 @@
     </div>
 
     <h2>5. Technology</h2>
-    <p>Next.js 16, React 19, TypeScript, Tailwind CSS 4, Framer Motion, Lucide React, Sora and Inter fonts. Hosted on Vercel. Built with Cursor. Reference pages were inspected with Playwright.</p>
-
-    <h2>6. How to run</h2>
-    <div class="card">
-      <p><code>git clone https://github.com/pavanvamsi-chimmiri/Importnow.git</code></p>
-      <p><code>npm install</code></p>
-      <p><code>npm run dev</code> → open http://localhost:3000</p>
-    </div>
+    <p>Next.js 16, React 19, TypeScript, Tailwind CSS 4, Framer Motion, Lucide React, Sora and Inter fonts. Hosted on Vercel.</p>
 
     <footer>
-      Let's ImportNow project summary · 21 November 2026 (IST) · Prepared for the ImportNow hiring assignment.
+      Let's ImportNow · China ship to India ship · Hyderabad and Shanghai
     </footer>
   </div>
 </body>
