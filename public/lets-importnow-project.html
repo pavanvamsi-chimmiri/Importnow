@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Let's ImportNow — Project document</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      --bg: #07131c;
+      --card: #10232e;
+      --ink: #f7f1e6;
+      --muted: #c9d2c8;
+      --red: #de2910;
+      --saffron: #ff9933;
+      --green: #138808;
+      --gold: #e8c56b;
+    }
+    * { box-sizing: border-box; }
+    @page { size: A4; margin: 0; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 12mm 14mm 12mm;
+      page-break-after: always;
+      break-after: page;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .page:last-child { page-break-after: auto; }
+    .page-body { flex: 1 1 auto; }
+    .bar {
+      height: 6px;
+      margin: -12mm -14mm 10mm;
+      background: linear-gradient(90deg, var(--red), var(--saffron), #fff 50%, var(--green));
+    }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 12px; }
+    .btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 16px;
+      font: 600 13px/1 Inter, system-ui, sans-serif;
+      cursor: pointer;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(100deg, var(--red), var(--saffron), var(--green));
+    }
+    .btn.ghost {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+    h1, h2, h3 { font-family: Inter, system-ui, sans-serif; }
+    h1 { font-size: 28px; margin: 0 0 4px; }
+    .sub { color: var(--muted); margin: 0 0 12px; font-family: Inter, system-ui, sans-serif; font-size: 13px; }
+    h2 {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(232,197,107,0.28);
+      padding-bottom: 5px;
+      margin: 14px 0 8px;
+    }
+    h3 { font-size: 13px; margin: 0 0 3px; color: #fff; }
+    p, li, td { font-size: 12.6px; }
+    p { margin: 0 0 8px; }
+    a { color: var(--saffron); }
+    table { width: 100%; border-collapse: collapse; font-family: Inter, system-ui, sans-serif; }
+    th, td { text-align: left; padding: 5px 6px; border-bottom: 1px solid rgba(255,255,255,0.08); vertical-align: top; }
+    th { color: var(--gold); font-weight: 600; width: 120px; font-size: 12px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 16px; }
+    .grid p { margin: 0; color: var(--muted); font-size: 12.2px; }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(232,197,107,0.18);
+      border-radius: 12px;
+      padding: 11px 13px;
+      margin: 8px 0;
+    }
+    ol, ul { margin: 4px 0 0; padding-left: 18px; }
+    li { margin: 0 0 5px; }
+    footer {
+      margin-top: auto;
+      padding-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      font-family: Inter, system-ui, sans-serif;
+      border-top: 1px solid rgba(232,197,107,0.25);
+    }
+    @media print {
+      body { background: #fff; color: #111; }
+      .actions { display: none; }
+      .bar { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      a { color: #0b5cab; }
+      .card { background: #f7f4ea; color: #111; }
+      h2, th, .sub, footer, .grid p { color: #444; }
+      h3 { color: #111; }
+      .page { width: auto; min-height: 297mm; }
+    }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <div class="bar"></div>
+    <div class="page-body">
+    <div class="actions">
+      <button class="btn" type="button" onclick="window.print()">Download / print PDF</button>
+      <a class="btn ghost" href="./lets-importnow-project.pdf" download="lets-importnow-project.pdf">Download PDF file</a>
+    </div>
+
+    <h1>Let's ImportNow</h1>
+    <p class="sub">End-to-end project document — China to India import website</p>
+
+    <h2>1. What this website is</h2>
+    <p>
+      Let's ImportNow is a complete website for importing goods from China to India. A client chooses
+      the product. The team finds verified factories, inspects them in person, checks quality before
+      the container is sealed, ships by sea or air, clears customs and GST in India, and unloads at
+      the shop, warehouse, villa, or site.
+    </p>
+    <p>
+      The product is built for Indian businesses that want to import without guessing: one-piece MOQ
+      on many items, an on-ground team, and a registered company in Shanghai for contracts and
+      payments. Offices are in Hyderabad and Shanghai.
+    </p>
+
+    <h2>2. Links</h2>
+    <table>
+      <tr><th>Website</th><td><a href="https://importnow.vercel.app">https://importnow.vercel.app</a></td></tr>
+      <tr><th>GitHub</th><td><a href="https://github.com/pavanvamsi-chimmiri/Importnow">https://github.com/pavanvamsi-chimmiri/Importnow</a></td></tr>
+    </table>
+
+    <h2>3. How we developed it</h2>
+    <p>
+      We designed and coded the site as one product: brand, layout, copy, motion, and a live
+      deployment. Work followed this path.
+    </p>
+    <ol>
+      <li><strong>Brand first.</strong> Named the product Let's ImportNow. Drew a cargo-ship mark for the logo and the browser tab. Set a China-red / India-saffron / India-green palette on an ocean-navy background, with a thin tricolor bar on every page.</li>
+      <li><strong>Layout and type.</strong> Built a dark, full-width marketing layout. Headings use Sora; body text uses Inter. Cards sit on glass-style panels with a gold edge so the page feels like one brand, not a set of blocks.</li>
+      <li><strong>China and India ships.</strong> Illustrated a China cargo ship (red hull, Chinese flag, CHINA on the side) and an India cargo ship (green hull, tricolor stripe, Indian flag). They sail on the hero route Shanghai → Chennai and on every recently-delivered card.</li>
+      <li><strong>Sections and copy.</strong> Wrote and coded each homepage block from real service copy: sourcing hubs, factory visits, licence details, Canton Fair trips, client jobs, FAQs, and the quote form.</li>
+      <li><strong>Interaction.</strong> Wired smooth-scroll navigation, a mobile menu, an auto-playing journey with a day counter, an FAQ accordion, Sign in / Sign up, and quote buttons that jump to contact.</li>
+      <li><strong>Responsive check.</strong> Tuned desktop, tablet, and phone so text does not overlap and the menu still works on a small screen.</li>
+      <li><strong>Ship it.</strong> Stack is Next.js, React, TypeScript, and Tailwind. The live site is on Vercel; the source is on GitHub.</li>
+    </ol>
+
+    <h2>4. Brand and visual design</h2>
+    <div class="card">
+      <div class="grid">
+        <div>
+          <h3>Look</h3>
+          <p>Ocean navy page, gold-edged cards, gradient buttons from China red through saffron to India green. The hero globe marks China and India cities and a trade route.</p>
+        </div>
+        <div>
+          <h3>Ships</h3>
+          <p>Delivered-job cards are not plain colour blocks. Each one shows two labelled ships on water with origin and destination chips, for example Foshan → Villa or Yiwu → Adilabad.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>5. What the product offers</h2>
+    <p>
+      The website explains the full import path, not only a homepage slogan. Sourcing covers Yiwu,
+      Guangzhou, Shenzhen and Foshan. Quality is checked before the container is sealed. Freight can
+      be a full container, a shared container, or air cargo. Customs, duties and GST are handled at
+      Indian ports. Delivery is to the door. Many products can start at one piece, so a new importer
+      does not need a full container on day one.
+    </p>
+    <p>
+      Proof on the page: 500+ businesses served, a large Instagram community, a Shanghai-registered
+      company, and four recent jobs (villa furniture, a supermarket in Adilabad, a convention centre,
+      and smart desks). Canton Fair trips are listed with visa, hotel, Indian food and factory visits
+      so a buyer can walk the market with the same team.
+    </p>
+    </div>
+    <footer>Let's ImportNow · Page 1 of 2 · China to India import website</footer>
+  </section>
+
+  <section class="page">
+    <div class="bar"></div>
+    <div class="page-body">
+
+    <h2>6. Pages and sections on the site</h2>
+    <div class="grid">
+      <div>
+        <h3>Header</h3>
+        <p>Let's ImportNow logo, links to Services, How it works, What we import, China trips, and Contact, plus Sign in / Sign up and a mobile menu.</p>
+      </div>
+      <div>
+        <h3>Hero</h3>
+        <p>Headline, trust badge, stats (500+ businesses, 83K+ community, 1 pc MOQ, Shanghai company), globe, and the Shanghai → Chennai ship route.</p>
+      </div>
+      <div>
+        <h3>City marquee</h3>
+        <p>Scrolling China and India city names under the hero to show the trade corridor.</p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <p>Six cards: product sourcing, factory inspection, quality control, shipping and logistics, customs clearance, doorstep delivery.</p>
+      </div>
+      <div>
+        <h3>How it works</h3>
+        <p>Six steps from factory to door, with a live shipment view and a progress bar from Shanghai to Chennai.</p>
+      </div>
+      <div>
+        <h3>What we import</h3>
+        <p>Furniture (Foshan), electronics (Shenzhen), EV (Guangzhou), lighting (Guzhen), supermarket goods (Yiwu), machinery (pan-China).</p>
+      </div>
+      <div>
+        <h3>Shanghai licence</h3>
+        <p>Registered company card for Shanghai Shengqiao Chain Trading Co., Ltd., plus licence, bank account, and on-ground team points.</p>
+      </div>
+      <div>
+        <h3>China trips</h3>
+        <p>Canton Fair guided trips: cities, visa and hotel, Indian food, factory visits, spring and autumn departures.</p>
+      </div>
+      <div>
+        <h3>Recently delivered</h3>
+        <p>Four jobs — villa furniture, Sagar Supermarket, Sreeman Convention Centre, smart desks — each with China and India ships.</p>
+      </div>
+      <div>
+        <h3>Stories, FAQ, contact</h3>
+        <p>Three client stories, six FAQ answers (MOQ, delivery time, GST, IEC, factory visits, ideas), and a quote form. Sign in and Sign up keep the same homepage look.</p>
+      </div>
+    </div>
+
+    <h2>7. Features that work</h2>
+    <div class="card">
+      <ul>
+        <li>Menu links scroll smoothly to the matching homepage section on desktop and on the phone menu.</li>
+        <li>Get a free quote buttons take the visitor to the contact form. The form collects name, city, category, quantity, budget, and details.</li>
+        <li>How it works steps play through on their own and can be clicked. The bar shows origin, destination, and day.</li>
+        <li>FAQ items open and close. The first question starts expanded.</li>
+        <li>Sign in and Sign up sit in the header. After login the header greets the visitor by name. Sign out returns the header to Sign in / Sign up.</li>
+        <li>City names scroll in a marquee. Hover states and button transitions are in place.</li>
+        <li>Phone, tablet, and desktop layouts keep the page readable, with no sideways scroll.</li>
+      </ul>
+    </div>
+
+    <h2>8. How a visitor uses the site</h2>
+    <p>
+      Land on the hero, read the offer, and scroll the China → India route. Use the header to jump to
+      services, the six-step journey, product categories, China trips, or contact. Fill the quote form
+      with the product they want to import. Optional: create an account or sign in to come back later.
+      On a phone the same path is in the hamburger menu.
+    </p>
+    <p>
+      The six-step journey on the site is: source the factory, inspect and approve samples, quality
+      check and loading, ocean freight, customs clearance, then doorstep delivery. The visitor can
+      watch that path play, or click a step. Contact fields cover name, city, category, quantity,
+      budget and extra detail so the Hyderabad / Shanghai team can reply with a real sourcing plan.
+    </p>
+
+    <h2>9. Technology</h2>
+    <p>
+      Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS 4, Framer Motion, Lucide React,
+      Sora and Inter. Shared chrome lives in components; each homepage block is a section; all
+      service copy lives in one constants file so the site can be updated in one place. Hosted on
+      Vercel from GitHub.
+    </p>
+    <p>
+      Website: <a href="https://importnow.vercel.app">https://importnow.vercel.app</a>
+      &nbsp;·&nbsp;
+      GitHub: <a href="https://github.com/pavanvamsi-chimmiri/Importnow">https://github.com/pavanvamsi-chimmiri/Importnow</a>
+    </p>
+    </div>
+    <footer>Let's ImportNow · Page 2 of 2 · China ship to India ship · Hyderabad and Shanghai</footer>
+  </section>
+</body>
+</html>

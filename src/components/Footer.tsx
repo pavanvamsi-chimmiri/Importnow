@@ -88,13 +88,13 @@ export default function Footer() {
 
           <div className="flex flex-wrap items-center gap-3">
             <a
-              href="/lets-importnow-updated-files.html"
+              href="/lets-importnow-project.html"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm text-foreground-secondary hover:text-white"
             >
-              Updated files (HTML)
+              Project document (HTML)
             </a>
             <a
-              href="/lets-importnow-updated-files.pdf"
+              href="/lets-importnow-project.pdf"
               download
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm text-foreground-secondary hover:text-white"
             >
