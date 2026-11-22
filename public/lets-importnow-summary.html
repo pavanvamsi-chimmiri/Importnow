@@ -22,14 +22,14 @@
       font-family: Georgia, "Times New Roman", serif;
       background: var(--bg);
       color: var(--ink);
-      line-height: 1.55;
+      line-height: 1.5;
     }
     .bar {
       height: 6px;
       background: linear-gradient(90deg, var(--red), var(--saffron), #fff 50%, var(--green));
     }
-    .wrap { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 0 0 28px; }
+    .wrap { max-width: 800px; margin: 0 auto; padding: 28px 24px 48px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 0 0 22px; }
     .btn {
       appearance: none;
       border: 0;
@@ -47,38 +47,44 @@
       color: var(--gold);
     }
     h1, h2, h3 { font-family: Inter, system-ui, sans-serif; }
-    h1 { font-size: 32px; margin: 0 0 8px; }
-    .sub { color: var(--muted); margin: 0 0 24px; font-family: Inter, system-ui, sans-serif; }
+    h1 { font-size: 30px; margin: 0 0 6px; }
+    .sub { color: var(--muted); margin: 0 0 18px; font-family: Inter, system-ui, sans-serif; font-size: 14px; }
     h2 {
-      font-size: 18px;
-      letter-spacing: 0.04em;
+      font-size: 15px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--gold);
       border-bottom: 1px solid rgba(232,197,107,0.25);
-      padding-bottom: 8px;
-      margin: 28px 0 12px;
+      padding-bottom: 6px;
+      margin: 22px 0 10px;
     }
-    p, li { font-size: 15px; }
+    p, li { font-size: 14px; }
+    p { margin: 0 0 10px; }
     a { color: var(--saffron); }
     .links { width: 100%; border-collapse: collapse; font-family: Inter, system-ui, sans-serif; font-size: 14px; }
-    .links th, .links td { text-align: left; padding: 10px 8px; border-bottom: 1px solid rgba(255,255,255,0.08); vertical-align: top; }
-    .links th { color: var(--gold); font-weight: 600; width: 180px; }
+    .links th, .links td { text-align: left; padding: 8px 6px; border-bottom: 1px solid rgba(255,255,255,0.08); vertical-align: top; }
+    .links th { color: var(--gold); font-weight: 600; width: 140px; }
     .card {
       background: var(--card);
       border: 1px solid rgba(232,197,107,0.18);
-      border-radius: 16px;
-      padding: 16px 18px;
-      margin: 12px 0;
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin: 10px 0;
     }
-    ol, ul { margin: 8px 0 0; padding-left: 20px; }
-    footer { margin-top: 36px; color: var(--muted); font-size: 13px; font-family: Inter, system-ui, sans-serif; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; }
+    .grid h3 { font-size: 13px; margin: 0 0 4px; color: #fff; }
+    .grid p { margin: 0; color: var(--muted); font-size: 13px; }
+    ol, ul { margin: 6px 0 0; padding-left: 20px; }
+    li { margin: 0 0 5px; }
+    footer { margin-top: 22px; color: var(--muted); font-size: 13px; font-family: Inter, system-ui, sans-serif; }
     @media print {
       body { background: #fff; color: #111; }
       .actions { display: none; }
       .bar { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
       a { color: #0b5cab; }
       .card { background: #f7f4ea; color: #111; }
-      h2, .links th, .sub, footer { color: #444; }
+      h2, .links th, .sub, footer, .grid p { color: #444; }
+      .grid h3 { color: #111; }
     }
   </style>
 </head>
@@ -95,13 +101,15 @@
 
     <h2>1. What this project is</h2>
     <p>
-      Let's ImportNow is an end-to-end import service from China to India. A client chooses the
-      product; the team sources factories, inspects them, ships the goods, clears customs, and
-      delivers to the door through a registered company in Shanghai.
+      Let's ImportNow is a full website for importing goods from China to India. A client chooses the
+      product. The team finds verified factories, inspects them in person, checks quality, ships the
+      container, clears customs and GST in India, and unloads at the shop, warehouse, or villa.
     </p>
     <p>
-      This website presents that service with a Let's ImportNow brand, China and India cargo ships,
-      and working quote, WhatsApp, and navigation flows.
+      The site was designed and developed as a complete product: branding, layout, copy, animations,
+      mobile navigation, a working quote form, and a live deployment. The visual identity uses
+      China red, India saffron, and India green on an ocean-navy background. Cargo ships with
+      Chinese and Indian flags appear in the hero and on delivered-job cards.
     </p>
 
     <h2>2. Links</h2>
@@ -110,33 +118,92 @@
       <tr><th>GitHub</th><td><a href="https://github.com/pavanvamsi-chimmiri/Importnow">https://github.com/pavanvamsi-chimmiri/Importnow</a></td></tr>
     </table>
 
-    <h2>3. What we did</h2>
+    <h2>3. What we designed and developed</h2>
     <ol>
-      <li>Built a Next.js + TypeScript + Tailwind website for the full import journey.</li>
-      <li>Implemented hero, services, journey, industries, Shanghai licence, China trips, projects, testimonials, FAQ, contact, and footer.</li>
-      <li>Made navigation, WhatsApp contact, the quote form, FAQ accordion, and mobile menu work.</li>
-      <li>Designed Let's ImportNow with a tricolor palette, ship logo, and a custom tab icon (no default Next.js “N”).</li>
-      <li>Added China-flag and India-flag cargo ships on delivered-job cards and in the hero.</li>
-      <li>Deployed the site and published the source on GitHub.</li>
+      <li>Created the Let's ImportNow brand: logo, tricolor bar, ocean theme, and a custom ship favicon in the browser tab (not the default Next.js “N”).</li>
+      <li>Built the site in Next.js, React, TypeScript, and Tailwind CSS, with reusable components for header, footer, logo, ships, marquee, and sections.</li>
+      <li>Illustrated a China cargo ship (red hull, Chinese flag, CHINA on the side) and an India cargo ship (green hull, tricolor stripe, Indian flag) sailing between origin and destination ports.</li>
+      <li>Coded every homepage section listed below, using the real service copy: sourcing hubs, licence details, trip inclusions, client stories, and FAQs.</li>
+      <li>Wired interactions: smooth-scroll menu, mobile hamburger, FAQ accordion, journey step player with day counter, and a quote form that sends the filled details.</li>
+      <li>Made the layout work on desktop, tablet, and phone with no overlapping text and a working mobile menu.</li>
+      <li>Deployed the production site and published the source on GitHub.</li>
     </ol>
 
-    <h2>4. Website sections</h2>
+    <h2>4. Pages and sections we built</h2>
+    <div class="grid">
+      <div>
+        <h3>Header and logo</h3>
+        <p>Let's ImportNow mark, section links, Get a free quote, and a mobile menu.</p>
+      </div>
+      <div>
+        <h3>Hero</h3>
+        <p>Headline, trust badge, stats (500+ businesses, 83K+ Instagram, 1 pc MOQ, Shanghai company), globe, and Shanghai → Chennai ships.</p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <p>Six cards: product sourcing, factory inspection, quality control, shipping and logistics, customs clearance, doorstep delivery.</p>
+      </div>
+      <div>
+        <h3>How it works</h3>
+        <p>Six-step journey from factory to door, with a live shipment view, ship artwork, and a Shanghai-to-Chennai progress bar.</p>
+      </div>
+      <div>
+        <h3>What we import</h3>
+        <p>Furniture (Foshan), electronics (Shenzhen), EV (Guangzhou), lighting (Guzhen), supermarket goods (Yiwu), machinery (pan-China).</p>
+      </div>
+      <div>
+        <h3>Shanghai licence</h3>
+        <p>Registered company card for Shanghai Shengqiao Chain Trading Co., Ltd., plus points on licence, bank account, and on-ground team.</p>
+      </div>
+      <div>
+        <h3>China trips</h3>
+        <p>Canton Fair guided trips, cities, visa and hotel inclusions, Indian food, factory visits, and spring/autumn departures.</p>
+      </div>
+      <div>
+        <h3>Recently delivered</h3>
+        <p>Four jobs — villa furniture, Sagar Supermarket, Sreeman Convention Centre, smart desks — each with China and India ships.</p>
+      </div>
+      <div>
+        <h3>Client stories and FAQ</h3>
+        <p>Three testimonials and six questions on MOQ, delivery time, GST, IEC, factory visits, and business ideas.</p>
+      </div>
+      <div>
+        <h3>Contact and footer</h3>
+        <p>Quote form (name, city, category, quantity, budget, details), office line Hyderabad · Shanghai, and site footer.</p>
+      </div>
+    </div>
+
+    <h2>5. Features that work on the live site</h2>
     <div class="card">
       <ul>
-        <li><strong>Header</strong> — Let's ImportNow logo, links, Get a free quote, mobile menu.</li>
-        <li><strong>Hero</strong> — headline, stats, globe, Shanghai → Chennai ships.</li>
-        <li><strong>Services</strong> — sourcing, inspection, quality, shipping, customs, doorstep delivery.</li>
-        <li><strong>How it works</strong> — six steps from factory to door, with shipment progress.</li>
-        <li><strong>What we import</strong> — furniture, electronics, EV, lighting, supermarket, machinery.</li>
-        <li><strong>Shanghai licence</strong> — registered China company details.</li>
-        <li><strong>China trips</strong> — Canton Fair trips and what is included.</li>
-        <li><strong>Recently delivered</strong> — four client jobs with China ship and India ship artwork.</li>
-        <li><strong>Stories, FAQ, Contact</strong> — reviews, accordion FAQ, WhatsApp form.</li>
+        <li>Menu links scroll to Services, How it works, What we import, China trips, Contact, and FAQ.</li>
+        <li>Get a free quote buttons take the visitor to the contact form.</li>
+        <li>The contact form collects sourcing details and opens a message with those fields filled in.</li>
+        <li>FAQ items open and close. The first question starts expanded.</li>
+        <li>How it works steps play through automatically and can be clicked. The progress bar shows origin, destination, and day.</li>
+        <li>City names scroll in a marquee. Hover states and button transitions are in place.</li>
+        <li>Phone, tablet, and desktop layouts were checked so the page does not break or scroll sideways.</li>
       </ul>
     </div>
 
-    <h2>5. Technology</h2>
-    <p>Next.js 16, React 19, TypeScript, Tailwind CSS 4, Framer Motion, Lucide React, Sora and Inter fonts. Hosted on Vercel.</p>
+    <h2>6. Visual work</h2>
+    <p>
+      The old default tab icon was replaced with a cargo-ship mark in China red and India green.
+      Headings use Sora; body text uses Inter. Cards sit on glass-style panels with a gold edge.
+      The hero globe shows China and India cities and a trade route. Project cards no longer use
+      a plain purple block; they show two labelled ships on water with origin and destination chips
+      (for example Foshan → Villa, Yiwu → Adilabad).
+    </p>
+
+    <h2>7. Technology we used</h2>
+    <p>
+      Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS 4, Framer Motion, Lucide React,
+      Google fonts Sora and Inter. The app is organised into <code>src/app</code>,
+      <code>src/components</code>, <code>src/sections</code>, <code>src/lib</code>, and
+      <code>src/types</code>. Content lives in <code>src/lib/constants.ts</code> so services,
+      industries, FAQs, and stories can be updated in one place. The production build is hosted
+      on Vercel from the GitHub repository.
+    </p>
 
     <footer>
       Let's ImportNow · China ship to India ship · Hyderabad and Shanghai
