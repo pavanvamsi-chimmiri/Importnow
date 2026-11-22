@@ -55,3 +55,17 @@ export interface ContactInfo {
   instagram: string;
   offices: string;
 }
+
+export interface AuthUser {
+  name: string;
+  email: string;
+  city: string;
+  passwordHash: string;
+  createdAt: string;
+}
+
+export interface AuthSession {
+  name: string;
+  email: string;
+  city: string;
+}

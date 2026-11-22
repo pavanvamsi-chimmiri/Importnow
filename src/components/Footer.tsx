@@ -1,10 +1,14 @@
 "use client";
 
 import { useMemo } from "react";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { NAV_LINKS } from "@/lib/constants";
 import Logo from "@/components/Logo";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const router = useRouter();
   const currentYear = useMemo(() => {
     if (typeof window !== "undefined") {
       return new Date().getFullYear();
@@ -13,54 +17,61 @@ export default function Footer() {
   }, []);
 
   const handleNavClick = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (!href.startsWith("#")) return;
+    if (pathname === "/") {
+      const element = document.querySelector(href);
+      if (element) element.scrollIntoView({ behavior: "smooth" });
+      return;
     }
+    router.push(`/${href}`);
   };
 
   return (
     <footer className="py-12 bg-background border-t border-border">
       <div className="container">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-          {/* Logo & Description */}
           <div className="max-w-sm">
-            <a
-              href="#home"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick("#home");
-              }}
-              className="mb-4 inline-block"
-              aria-label="Let's ImportNow home"
-            >
+            <Link href="/" className="mb-4 inline-block" aria-label="Let's ImportNow home">
               <Logo size="sm" />
-            </a>
+            </Link>
             <p className="text-sm text-foreground-muted">
               End-to-end imports from China to India: sourcing, factory
               inspection, shipping and customs. Save time. Reduce costs.
             </p>
           </div>
 
-          {/* Navigation */}
           <nav className="flex flex-wrap gap-x-8 gap-y-3">
-            {[...NAV_LINKS, { label: "FAQ", href: "#faq" }].map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(link.href);
-                }}
-                className="text-sm text-foreground-muted hover:text-white transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
+            {[
+              ...NAV_LINKS,
+              { label: "FAQ", href: "#faq" },
+              { label: "Sign in", href: "/signin" },
+              { label: "Sign up", href: "/signup" },
+            ].map((link) =>
+              link.href.startsWith("/") ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-foreground-muted hover:text-white transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={pathname === "/" ? link.href : `/${link.href}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(link.href);
+                  }}
+                  className="text-sm text-foreground-muted hover:text-white transition-colors"
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </nav>
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <p className="text-sm text-foreground-secondary">
             © {currentYear}{" "}

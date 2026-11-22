@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Sora, Inter } from "next/font/google";
 import "./globals.css";
+import Providers from "@/components/Providers";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -47,7 +51,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sora.variable} ${inter.variable}`}>
       <body className="min-h-screen bg-background text-foreground antialiased overflow-x-hidden">
-        {children}
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+          <WhatsAppButton />
+        </Providers>
       </body>
     </html>
   );

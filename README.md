@@ -17,7 +17,7 @@ A China-to-India import website. Clients pick a product; Let's ImportNow handles
 - **China cargo ship** and **India cargo ship** on the recently-delivered cards and in the hero.
 
 ### Website sections
-1. **Header** — Let's ImportNow logo, section links, quote button, mobile menu.
+1. **Header** — Let's ImportNow logo, section links, Sign in / Sign up, mobile menu.
 2. **Hero** — headline, stats, globe, China → India ship route (Shanghai to Chennai).
 3. **City marquee** — scrolling China and India city names.
 4. **Services** — sourcing, factory inspection, quality control, shipping, customs, doorstep delivery.
@@ -30,9 +30,11 @@ A China-to-India import website. Clients pick a product; Let's ImportNow handles
 11. **FAQ** — accordion answers about MOQ, delivery time, GST, IEC, factory visits.
 12. **Contact** — form that opens WhatsApp with the filled details.
 13. **Footer** and a floating WhatsApp button.
+14. **Sign in / Sign up** — homepage-style ImportNow pages (China → India route, stats, and account forms).
 
 ### What works
 - Smooth-scroll navigation on desktop and mobile.
+- Sign in and Sign up with local account storage.
 - Quote buttons and contact form open WhatsApp.
 - FAQ expand/collapse.
 - Journey steps auto-advance.
@@ -52,8 +54,8 @@ A China-to-India import website. Clients pick a product; Let's ImportNow handles
 
 ```
 src/
-├── app/                 # layout, page, global styles, site icon
-├── components/          # Header, Footer, Logo, RouteShips, CityMarquee, WhatsApp
+├── app/                 # layout, home, signin, signup, global styles, site icon
+├── components/          # Header, Footer, Logo, RouteShips, Auth, CityMarquee, WhatsApp
 ├── sections/            # Hero, Services, Journey, Industries, License, Trips,
 │                        # Projects, Testimonials, FAQ, Contact
 ├── lib/constants.ts     # all copy and content
