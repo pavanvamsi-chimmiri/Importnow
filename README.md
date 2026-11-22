@@ -70,6 +70,7 @@ public/                  # icons and the downloadable project PDF
 
 ## Tools used
 
-- **Cursor** — build, restyle, and deploy
-- **Playwright** — inspect layouts and capture screenshots
-- **Vercel** — hosting
+- **Cursor** — the editor used to design the pages, write the code, restyle the UI, and push to GitHub.
+- **Playwright** — opens the site in a real browser to check desktop and mobile layouts, take screenshots, and print the project PDF.
+- **Vercel** — hosts the live website. A GitHub push builds the Next.js app and publishes it at importnow.vercel.app.
+- **GitHub** — stores the source so the project can be cloned, reviewed, and redeployed.
